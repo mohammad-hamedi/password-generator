@@ -1,0 +1,39 @@
+name: Full CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint . --ext .js
+
+      - name: Run Prettier check
+        run: npx prettier . --check
+
+      - name: Run unit tests with Jest
+        run: npx jest --coverage
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v1.4.0
+
+      - name: Check bundle size (optional)
+        run: |
+          du -sh ./dist || echo "No dist folder found"
