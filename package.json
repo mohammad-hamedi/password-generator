@@ -1,0 +1,25 @@
+{
+  "name": "password-generator-",
+  "version": "1.0.0",
+  "main": "password-generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammad-hamedi/password-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohammad-hamedi/password-generator/issues"
+  },
+  "homepage": "https://github.com/mohammad-hamedi/password-generator#readme",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.26.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3"
+  }
+}

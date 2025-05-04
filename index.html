@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>password generator </title>
+    <title>Password Generator</title>
 </head>
 <body>
     <div class="box">
-        <h1>password generator</h1>
+        <h1>Password Generator</h1>
         <div class="generator">
-            <label for="length">password length</label>
-            <input id="length" min="1" max="50" value="12" >
-            <button id="generate">generate</button>
+            <label for="length">Password Length:</label>
+            <input id="length" type="number" min="1" max="50" value="12" aria-label="Password Length">
+            <button id="generate" class="btn">Generate</button>
         </div>
         <div class="result">
-            <h2>password:</h2>
-            <p id="password"></p>
-            <button id="copy" class="copy btn" >copy</button>
+            <h2>Generated Password:</h2>
+            <p id="password" class="password-display"></p>
+            <button id="copy" class="btn copybtn">Copy to Clipboard</button>
+        </div>
+        <div class="actions">
+            <button id="clear" class="btn">Clear</button>
+            <button id="randomize" class="btn">Randomize Length</button>
+        </div>
     </div>
-    <script src="./password-generator.js" ></script>
+    <script src="./password-generator.js"></script>
 </body>
 </html>
